@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="color-scheme" content="dark">
+    <title>EquityFlow</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script>
+      // Persist dark preference and set early to avoid FOUC
+      try {
+        const pref = localStorage.getItem('theme');
+        if (pref === 'light') document.documentElement.classList.remove('dark');
+        else document.documentElement.classList.add('dark');
+      } catch {}
+    </script>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

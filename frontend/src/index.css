@@ -1,0 +1,53 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Smooth fonts & selection */
+html, body, #root { height: 100%; }
+* { box-sizing: border-box; }
+:root {
+  color-scheme: dark;
+}
+::selection { background: rgba(94,126,255,0.35); }
+
+body {
+  @apply bg-ink-950 text-white;
+  background-image: theme('backgroundImage.brand-gradient');
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+/* Glass card */
+.card {
+  @apply rounded-3xl bg-white/5 backdrop-blur-xs shadow-ring border border-white/10;
+}
+
+/* Inputs */
+.input {
+  @apply w-full rounded-2xl bg-white/5 border border-white/10 px-4 py-3 text-white placeholder-white/40
+         focus:outline-none focus:ring-2 focus:ring-brand-500/60;
+}
+.select {
+  @apply w-full rounded-2xl bg-white/5 border border-white/10 px-3 py-3 text-white focus:outline-none focus:ring-2 focus:ring-brand-500/60;
+}
+.textarea {
+  @apply w-full rounded-2xl bg-white/5 border border-white/10 px-4 py-3 text-white placeholder-white/40
+         focus:outline-none focus:ring-2 focus:ring-brand-500/60;
+}
+
+/* Buttons */
+.btn {
+  @apply inline-flex items-center justify-center gap-2 rounded-2xl px-4 py-2 font-medium transition;
+}
+.btn-primary {
+  @apply bg-white text-ink-950 hover:opacity-90;
+}
+.btn-outline {
+  @apply border border-white/20 hover:border-white/40;
+}
+.btn-ghost {
+  @apply hover:bg-white/5;
+}
+
+/* Small helper text */
+.muted { @apply text-white/60; }
